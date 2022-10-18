@@ -10,7 +10,7 @@ redirect_from:
 
 Hi! I'm a Master's student in Computer Science at the [University of Washington](https://www.cs.washington.edu/), where I completed my Bachelor's degrees of computer science (B.S.) and mathematics (B.A.) in 2022.
 
-I'm broadly interested in Natural Language Processing and Computer Vision and I'm very fortunate to work in Professor [Noah A. Smith](https://nasmith.github.io/)'s Lab. In the past summer, I worked with [Ofir Press](https://ofir.io/) on investigating the compositionality in the language model, and also developed a new prompting method called Self-ask that improves the ability of language models to answer complex questions.
+I'm broadly interested in Natural Language Processing and Computer Vision and I'm very fortunate to work in Professor [Noah A. Smith](https://nasmith.github.io/)'s Lab. In the past summer, I worked with [Ofir Press](https://ofir.io/) on investigating the compositionality in the language model, and also developed a new prompting method that improves the ability of language models to answer complex questions.
 
 During my undergraduate years, I also worked in Professor [Dieter Fox](https://homes.cs.washington.edu/~fox/)'s lab on unseen object segmentation and tracking, reinforcement learning, and interactive structural understanding.
 
