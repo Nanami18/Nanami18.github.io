@@ -18,4 +18,4 @@ Thanks to [Ofir Press](https://ofir.io/), [Aaron Walsman](https://github.com/aar
 
 Being teaching assistant is my most enjoyable extracurricular acitivity besides doing research. I'm glad to be able to work with [Robbie Weber](https://weberrobbie.com/) and a group of passionate TA colleagues in the past year to teach on a variety of theory courses.
 
-You can download my resume [here](https://drive.google.com/file/d/1DfO7T5a0yUr9wjRBIrwiBm7Ft5Oz3vWn/view?usp=sharing).
+You can download my CV [here](https://drive.google.com/file/d/15vdVvHWSYJvSArzFpM53jX-i5sSXnGJP/view?usp=sharing).
