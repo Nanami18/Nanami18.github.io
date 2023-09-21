@@ -14,7 +14,7 @@ author_profile: true
 [Paper](https://arxiv.org/abs/2305.13534){: .btn .btn--info .btn--small}
 
 * Yi Li, **Muru Zhang**, Markus Grotz, Kaichun Mo, Dieter Fox
-<span style="color:navy">STOW: Discrete-Frame Segmentation and Tracking of Unseen Objects for Warehouse Picking Robots</span>
+<span style="color:navy">STOW: Discrete-Frame Segmentation and Tracking of Unseen Objects for Warehouse Picking Robots</span>    
 **CORL 2023**            
 [Paper](https://openreview.net/forum?id=48qUHKUEdBf){: .btn .btn--info .btn--small}
 

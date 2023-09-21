@@ -8,9 +8,9 @@ redirect_from:
   - /about.html
 ---
 
-Hi! I'm a Master's student in Computer Science at the [University of Washington](https://www.cs.washington.edu/), where I completed my Bachelor's degrees of computer science (B.S.) and mathematics (B.A.) in 2022. I expect to complete my Master's degree in 2024 Spring.
+Hi! I'm a Master's student in Computer Science at the [University of Washington](https://www.cs.washington.edu/), where I completed my Bachelor's degrees of computer science (B.S.) and mathematics (B.A.) in 2022. I expect to earn my Master's degree by Spring 2024.
 
-I'm very fortunate to work in Professor [Noah A. Smith](https://nasmith.github.io/)'s Lab. Over the past year, I worked with [Ofir Press](https://ofir.io/) on investigating the compositional abilities in language models, and the phenomenon of hallucination snowballing.
+I'm very fortunate to be part of Professor [Noah A. Smith](https://nasmith.github.io/)'s Lab. Over the past year, I worked with [Ofir Press](https://ofir.io/) on investigating the compositional abilities in language models, and exploring the phenomenon of hallucination snowballing.
 
 During my undergraduate years, I also worked in Professor [Dieter Fox](https://homes.cs.washington.edu/~fox/)'s lab on unseen object segmentation and tracking, reinforcement learning, and interactive structural understanding.
 
