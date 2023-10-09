@@ -27,7 +27,7 @@ author_profile: true
 
 * Ofir Press, **Muru Zhang**, Sewon Min, Ludwig Schmidt, Noah A. Smith, Mike Lewis               
 <span style="color:navy">Measuring and Narrowing the Compositionality Gap in Language Models</span>              
-**Preprint**                                       
+**EMNLP 2023**                                       
 [Paper](https://arxiv.org/abs/2210.03350){: .btn .btn--info .btn--small}   
 
 * Aaron Walsman, **Muru Zhang**, Klemen Kotar, Karthik Desingh, Ali Farhadi, Dieter Fox                
