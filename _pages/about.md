@@ -18,4 +18,4 @@ Thanks to [Ofir Press](https://ofir.io/), [Aaron Walsman](https://github.com/aar
 
 Being a teaching assistant is my most enjoyable extracurricular acitivity besides doing research. Being 7-quarters TA at UW on algorithm, discrete math, and introductory cs theory, I'm grateful to be able to teach these materials to the excellent audience at the Allen school.
 
-You can download my CV [here](https://drive.google.com/file/d/1G4dc6beOiG8Xp4QqTBckwBaXfiedqvU-/view?usp=drive_link).
+You can download my CV [here](../files/Muru_Zhang_CV).
