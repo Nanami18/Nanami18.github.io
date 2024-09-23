@@ -8,7 +8,9 @@ redirect_from:
   - /about.html
 ---
 
-Hi! I'm an incoming PhD student at the [University of Southern California](https://viterbischool.usc.edu/), where I will be advised by Professor [Swabha Swayamdipta](https://swabhs.com/) and Professor [Robin Jia](https://robinjia.github.io/). I'm interested in all things related to language models, particularly in activation engineering, post-training adaptation, interpretability and efficiency.
+Hi! I'm a first-year PhD student at the [University of Southern California](https://viterbischool.usc.edu/), where I will be advised by Professor [Swabha Swayamdipta](https://swabhs.com/) and Professor [Robin Jia](https://robinjia.github.io/). I'm interested in all things related to language models, particularly in activation engineering, post-training, scientific undertanding of LLM, and efficiency.
+
+I'm currently interning with Together AI, working on adapting an LLM to more efficient architectures. In Summer 2023, I interned with the CodeWhisperer team at Amazon, where I worked on efficient long-context langauge modeling.
 
 I completed both my Bachelor's degree and Master's degree at [University of Washington](https://www.cs.washington.edu/) and I was very fortunate to be part of Professor [Noah A. Smith](https://nasmith.github.io/)'s Lab.
 
