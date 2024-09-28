@@ -10,7 +10,7 @@ author_profile: true
 
 * **Muru Zhang**, Ofir Press, William Merrill, Alisa Liu, Noah A. Smith            
 <span style="color:navy">How Language Model Hallucinations Can Snowball</span>  
-**Preprint**          
+**ICML 2024**          
 [Paper](https://arxiv.org/abs/2305.13534){: .btn .btn--info .btn--small}
 
 * Yi Li, **Muru Zhang**, Markus Grotz, Kaichun Mo, Dieter Fox     
