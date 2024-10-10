@@ -15,3 +15,5 @@ I'm currently interning with Together AI, working on adapting LLM for efficiency
 I completed both my Bachelor's degree and Master's degree at [University of Washington](https://www.cs.washington.edu/) and I was very fortunate to be mentored by Prof. [Noah A. Smith](https://nasmith.github.io/), [Ofir Press](https://ofir.io/), and [Aaron Walsman](https://github.com/aaronwalsman). I'm grateful for all my amazing collaborators and mentors at UW for their help and guidance on research.
 
 I love teaching and had plenty of joys as a teaching assistant at UW for 9-quarters, it was my pleasure to be able to teach computer science to the excellent audience at the Allen school :)
+
+You can download my CV [here](../files/Muru_Zhang_CV.pdf).
