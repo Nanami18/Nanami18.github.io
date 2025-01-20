@@ -16,4 +16,4 @@ I completed both my Bachelor's degree and Master's degree at [University of Wash
 
 I love teaching and had plenty of joys as a teaching assistant at UW for 9-quarters, it was my pleasure to be able to teach computer science to the excellent audience at the Allen school :)
 
-You can download my CV [here](../files/Muru_CV_2024oct11.pdf).
+You can download my CV [here](../files/Muru_CV_website.pdf).

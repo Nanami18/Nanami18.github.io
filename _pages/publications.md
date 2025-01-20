@@ -5,6 +5,21 @@ permalink: /publications/
 author_profile: true
 ---
 
+### 2024
+
+* **Muru Zhang\***, Mayank Mishra\*, Zhongzhu Zhou, William Brandon, Jue Wang, Yoon Kim, Jonathan Ragan-Kelley, Shuaiwen Leon Song, Ben Athiwaratkun, Tri Dao     
+<span style="color:navy">Ladder-residual: parallelism-aware architecture for accelerating large model inference with communication overlapping</span>           
+[Paper](https://arxiv.org/abs/2501.06589){: .btn .btn--info .btn--small}   
+
+* Aaron Walsman, **Muru Zhang**, Adam Fishman, Dieter Fox, Ali Farhadi     
+<span style="color:navy">Learning to Build by Building Your Own Instructions</span>   
+**ECCV 2024**            
+[Paper](https://www.arxiv.org/abs/2410.01111){: .btn .btn--info .btn--small}   
+
+* Guang Yang, **Muru Zhang**, Lin Qiu, Yanming Wan, Noah A. Smith
+<span style="color:navy">Toward a More Complete OMR Solution</span>   
+**ISMIR 2024**            
+[Paper](https://arxiv.org/abs/2409.00316){: .btn .btn--info .btn--small}   
 
 ### 2023
 
