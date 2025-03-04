@@ -58,7 +58,7 @@ While Ladder-resiudal is able to provide consistent speedup, we see the speedup 
 
 Despite promising speedup, there is another important question to answer: does applying ladder-residual hurt performance?
 
-We train a 1B and a 3B standard Transformer and same size counterparts with Ladder-residual block (we will refer to it as Ladder Transformer) from scratch on 100B tokens of <ins>[FineWeb-edu](https://huggingface.co/datasets/HuggingFaceFW/fineweb-edu)</ins> dataset. We also train a Transformer with parallel attention/mlp block, as used in <ins>[PaLM](https://arxiv.org/abs/2204.02311)</ins>, which we refer to as Parallel Transformer. While not proposed for reducing communication, by parallelizing attention and mlp within each layer we can effecitvely cut 50% of the communication therefore we include it as a related alternative for comparison.
+We train a 1B and a 3B standard Transformer and same size counterparts with Ladder-residual block (we will refer to it as Ladder Transformer) from scratch on 100B tokens of [FineWeb-edu](https://huggingface.co/datasets/HuggingFaceFW/fineweb-edu) dataset. We also train a Transformer with parallel attention/mlp block, as used in [PaLM](https://arxiv.org/abs/2204.02311), which we refer to as Parallel Transformer. While not proposed for reducing communication, by parallelizing attention and mlp within each layer we can effecitvely cut 50% of the communication therefore we include it as a related alternative for comparison.
 
 ![train from scratch performance comparison](train_from_scratch_perf.png)
 
@@ -72,7 +72,7 @@ We train a 1B and a 3B standard Transformer and same size counterparts with Ladd
  Finally, we demontrate a quick application of Ladder-residual - as a direct drop-in for a pretraiend model. We convert a state-of-the-art open-source model, Llama
 3.1-8B-Instruct into a hybrid Ladder Residual structure, by
  applying Ladder Residual to the upper half of the model
- (layers 16-32 for LLaMA-3.1-8B-Instruct). We call this variant Hybrid-Ladder-8B-16L. We report both the zero-shot results and retraining results where we retrain the converted hybrid ladder model with 3B tokens from the <ins>[Infinity Instruct](https://huggingface.co/datasets/BAAI/Infinity-Instruct)</ins> dataset.
+ (layers 16-32 for LLaMA-3.1-8B-Instruct). We call this variant Hybrid-Ladder-8B-16L. We report both the zero-shot results and retraining results where we retrain the converted hybrid ladder model with 3B tokens from the[Infinity Instruct](https://huggingface.co/datasets/BAAI/Infinity-Instruct) dataset.
 
 ![adaptation performance](adaptation_performance.png)
 
@@ -85,6 +85,6 @@ tillation or iterative training, we can obtain a Ladder-Llama
 
 ### Looking forward
 
-For more details, please check our <ins>[paper](https://arxiv.org/abs/2501.06589)</ins>. We also provide code for <ins>[training](https://github.com/IBM/dolomite-engine/tree/main)</ins> and <ins>[inference](https://github.com/mayank31398/ladder-residual-inference)</ins>, feel free to try it yourself!
+For more details, please check our [paper](https://arxiv.org/abs/2501.06589). We also provide code for [training](https://github.com/IBM/dolomite-engine/tree/main) and [inference](https://github.com/mayank31398/ladder-residual-inference), feel free to try it yourself!
 
 Besides delivering a simple acceleration method, we also hope Ladder-residual inspires more research on the ML algorithm-system co-design.
