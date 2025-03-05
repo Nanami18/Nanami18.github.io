@@ -7,7 +7,7 @@ author_profile: true
 
 ### 2025
 
-* Hamish Ivison, **Muru Zhang**, Faeze Brahman, Pang Wei Koh, Pradeep Dasigi
+* Hamish Ivison, **Muru Zhang**, Faeze Brahman, Pang Wei Koh, Pradeep Dasigi  
 <span style="color:navy">Large-Scale Data Selection for Instruction Tuning</span>           
 [Paper](https://arxiv.org/abs/2503.01807){: .btn .btn--info .btn--small}   
 
