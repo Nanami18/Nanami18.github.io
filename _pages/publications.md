@@ -22,7 +22,7 @@ author_profile: true
 **ECCV 2024**            
 [Paper](https://www.arxiv.org/abs/2410.01111){: .btn .btn--info .btn--small}   
 
-* Guang Yang, **Muru Zhang**, Lin Qiu, Yanming Wan, Noah A. Smith
+* Guang Yang, **Muru Zhang**, Lin Qiu, Yanming Wan, Noah A. Smith   
 <span style="color:navy">Toward a More Complete OMR Solution</span>   
 **ISMIR 2024**            
 [Paper](https://arxiv.org/abs/2409.00316){: .btn .btn--info .btn--small}   
