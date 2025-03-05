@@ -39,7 +39,7 @@ The following diagram shows the difference of computation graph for standard Tra
 
 ### How much speedup can we get under Ladder-residual
 
-Analytically, we show that we can essentially hide all communication latency (except the last one as there is communication to overlap with) as computation is usually slower than communication. However, the real speedup can vary due to **TODO** issues. To provide a clear picture of what ladder-residual can offer under various setup, we report the token-per-second (TPS) under a 70B standard Transformer (llama3 architecture) and with Ladder-residual below, using TP across 8 H100 GPUs with NVLink interconnect:
+Analytically, we show that we can essentially hide all communication latency (except the last one as there is communication to overlap with) as computation is usually slower than communication. However, the real speedup can vary. To provide a clear picture of what ladder-residual can offer under various setup, we report the token-per-second (TPS) under a 70B standard Transformer (llama3 architecture) and with Ladder-residual below, using TP across 8 H100 GPUs with NVLink interconnect:
 
 | Batch size | Standard transformer | Ladder-residual | Speedup |
 |------------|----------------------|-----------------|---------|
@@ -51,8 +51,6 @@ Analytically, we show that we can essentially hide all communication latency (ex
 | 64         | 1940.99              | 2241.84         | 1.155   |
 
 While Ladder-resiudal is able to provide consistent speedup, we see the speedup diminishes as we increase the batch size, indicating less share of communication in the overall latency. The TPS scaling also becomes sublinear as batch size increases, indicating a saturation of compute.
-
-**TODO: why we see the trend that as compute increases, the benefit of ladder diminishes? Is it because of the compute slowdown? Feels like in low-compute case for example decode stage, the computation should share more portion of the latency as it's an underutilization of the resource, unless the same thing also happens for communication (bandwidth is high enough and only latency matters...?)**
 
 ### Ladder-resiudal can keep up with standard Transofrmer
 
@@ -76,7 +74,7 @@ We train a 1B and a 3B standard Transformer and same size counterparts with Ladd
 
 ![adaptation performance](adaptation_performance.png)
 
-We can see zeroshot-ly, after adaptation, there is a huge performance drop mainly on generative tasks as the computation flow is messed up. But after light retraining, the hybrid Ladder Llama is able to reach the same level of performance with the original Llama. We additionally repotr the result for retraining Hybrid-Ladder-8B-20L (converted last 20 layers to Ladder Residual), and found that there is a slight drop in performance. There is a chance that with
+We can see immediately after adaptation, there is a huge performance drop mainly on generative tasks as the computation flow is messed up. But after light retraining, the hybrid Ladder Llama is able to reach the same level of performance with the original Llama. We additionally repotr the result for retraining Hybrid-Ladder-8B-20L (converted last 20 layers to Ladder Residual), and found that there is a slight drop in performance. There is a chance that with
  longer adaptation, or smarter adaptation techniques like dis
 tillation or iterative training, we can obtain a Ladder-Llama
  with more layers adapted. We leave the further exploration
