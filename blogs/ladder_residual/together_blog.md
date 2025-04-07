@@ -1,16 +1,20 @@
 ## Hide the communication latency for multi-gpu LLM serving with Ladder Residual
 
-As the foundation models is scaled larger and larger, multi-gpu or even multi-node inference is highly critical. For example, the 70 version of llama3 requires 70 * 2 = 140 GB in bfloat16 to even load the model into memory, which necessaite distributed inference. We would want to effectively utilize all GPUs that together serve one model, and tensor parallelism (TP) is a common approach. In TP, we divide weights and computation across all devices (number of devices is referred as the TP degree) and synchronize the result across devices after each module. While TP itself provide speedup while alleviate the memory issue, the synchronization (also referred as communication) turns out to be a major bottleneck of the overall latency. For a 70 model with TP degree 8, the communication can account for 38% of the end-to-end latency. 
+As foundation models continues to scale, multi-gpu or even multi-node inference will be even more crucial. For example, the 70 version of llama3 requires 70 * 2 = 140 GB in bfloat16 to even load the model into memory, which necessaite distributed inference. We would want to effectively utilize all GPUs that together serve one model, and tensor parallelism (TP) is a widely adopted approach.
 
-In this post, we introduce our project that proposes a simple architecture modification that allows the overlapping of GPU communication and computation, a quick summary of what it can achieves:
+In TP, we divide weights and computation across all devices (the number of devices is referred as the TP degree) and synchronize the results between them. While this helps with both memory efficiency and speed, the synchronization (also referred as communication) turns out to be a major bottleneck of the overall latency. For a 70 model with TP degree 8, the communication can account for 38% of the total inference time. 
 
-* ~30% speedup for 70B with TP degree 8, and 405B with TP degree 16, across various batch size, and almost doubled speedup when fast interconnect (NVLink) is not available
+In this post, we introduce Ladder-residual, a simple architecture tweak that allows computation and communication to happen in parallel—reducing latency without needing custom kernels or hardware changes.
+
+Here's a quick summary of what Ladder-residual achieves:
+
+* ~30% speedup for LLaMA 3.1-70B (TP=8) and LLaMA 3.1-405B (TP=16), and almost doubled speedup when fast interconnect (NVLink) is not available.
   
-* Can be used to adapt on pretrained model to achieve speedup.
+* Can be applied to a pretraiend model - we adapt LlaMA 3.1-8B and gained 23% speedup with no accuracy lost
   
-* Pure PyTorch level modification, no custom kernels needed, work on any hardware.
+* Pure PyTorch level modification, no custom CUDA kernels needed, work on any hardware.
 
-**Our insight is that in addition to system optimizations, one can also redesign the model architecture to decouple communication from computation.** While we only focus on Transformer with Tensor Parallelism in this paper, the design can be easily adopted for a different architecture to accelerate any convnetional parallelism patterns. 
+**Our insight is that in addition to system optimizations, one can also redesign the model architecture to decouple communication from computation.** While we only focus on Transformer with Tensor Parallelism here, the design can be easily extended to a different architecture to accelerate any convnetional parallelism patterns.
 
 
 ### Tensor paralleism and GPU communication
@@ -39,7 +43,7 @@ The following diagram shows the difference of computation graph for standard Tra
 
 ### How much speedup can we get under Ladder-residual
 
-Analytically, we show that we can essentially hide all communication latency (except the last one as there is communication to overlap with) as computation is usually slower than communication. However, the real speedup can vary. To provide a clear picture of what ladder-residual can offer under various setup, we report the token-per-second (TPS) under a 70B standard Transformer (llama3 architecture) and with Ladder-residual below, using TP across 8 H100 GPUs with NVLink interconnect:
+To provide a clear picture of what ladder-residual can offer under various setup, we benchmark the token-per-second (TPS) of LLaMA-3.1-70B with and without Ladder-residual below, using TP across 8 H100 GPUs with NVLink interconnect:
 
 | Batch size | Standard transformer | Ladder-residual | Speedup |
 |------------|----------------------|-----------------|---------|
@@ -52,9 +56,24 @@ Analytically, we show that we can essentially hide all communication latency (ex
 
 While Ladder-resiudal is able to provide consistent speedup, we see the speedup diminishes as we increase the batch size, indicating less share of communication in the overall latency. The TPS scaling also becomes sublinear as batch size increases, indicating a saturation of compute.
 
+From another axis, we show the speedup with respect to the model size below, with batch size 4 and TP degree 8:
+
+| Model Size | Standard transformer | Ladder-residual | Speedup |
+|------------|----------------------|-----------------|---------|
+| 1B          | 2063.50              |  2979.42        | 1.444   |
+| 3B          | 1139.88              | 1727.48         | 1.515   |
+| 8B          | 902.44              |  1305.52         | 1.447   |
+| 34B         | 843.15               | 1003.35         | 1.348   |
+| 70B         | 259.62              | 338.5         | 1.301   
+
+Finally, for larger models like Llama-3.1-405B, more than one node is required to serve the model. Due to much slower cross-node communication, tensor parallelism is not traditionally used across nodes. However, with Ladder-residual, using pure TP might be possible. As shown below, Ladder-residual can bring over 30% speedup across different batch size when serving 405B model with TP degree 16.
+
+![405B benchmarking](405b_nvl.png)
+
+
 ### Ladder-resiudal can keep up with standard Transofrmer
 
-Despite promising speedup, there is another important question to answer: does applying ladder-residual hurt performance?
+Okay, speed is great, but what about accuracy? Ladder-residual is a different architecture and we would hope it can perform similarly to standard Transformer. Below we tackle this problem from two angle: training a Ladder-residual model from scratch and adapt a pretrained standard Transformer to it.
 
 We train a 1B and a 3B standard Transformer and same size counterparts with Ladder-residual block (we will refer to it as Ladder Transformer) from scratch on 100B tokens of [FineWeb-edu](https://huggingface.co/datasets/HuggingFaceFW/fineweb-edu) dataset. We also train a Transformer with parallel attention/mlp block, as used in [PaLM](https://arxiv.org/abs/2204.02311), which we refer to as Parallel Transformer. While not proposed for reducing communication, by parallelizing attention and mlp within each layer we can effecitvely cut 50% of the communication therefore we include it as a related alternative for comparison.
 
