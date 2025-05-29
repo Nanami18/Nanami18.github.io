@@ -13,7 +13,7 @@ Hi! I'm a first-year PhD student at the [University of Southern California](http
 - Inform model compression techniques by identifying important and redundant components
 - Investigate when and why a model might fail
 
-I'm currently interning with Together AI, working on efficient language model architectures. In Summer 2023, I interned with the CodeWhisperer team at Amazon, where I worked on efficient long-context langauge modeling.
+I'm currently a student researcher at Google Deepmind working on language model architectures. In the past, I have interned at TogetherAI and the CodeWhisperer team at Amazon on various language model effciency and architecture design related projects. 
 
 I completed both my Bachelor's degree and Master's degree at [University of Washington](https://www.cs.washington.edu/) and I was very fortunate to be mentored by Prof. [Noah A. Smith](https://nasmith.github.io/), [Ofir Press](https://ofir.io/), and [Aaron Walsman](https://github.com/aaronwalsman). I'm grateful for all my amazing collaborators and mentors at UW for their help and guidance on research.
 
