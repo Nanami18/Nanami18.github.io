@@ -7,6 +7,16 @@ author_profile: true
 
 ### 2025
 
+* Xiaoyuan Zhu, **Muru Zhang**, Ollie Liu, Robin Jia, Willie Neiswanger
+<span style="color:navy">LLM Unlearning Without an Expert Curated Dataset</span>  
+[Paper](https://arxiv.org/abs/2508.06595){: .btn .btn--info .btn--small}   
+**COLM 2025**
+
+* Ting-Yun Chang, **Muru Zhang**, Jesse Thomason, Robin Jia
+<span style="color:navy">Why Do Some Inputs Break Low-Bit LLM Quantization?</span>           
+[Paper](https://arxiv.org/abs/2506.12044){: .btn .btn--info .btn--small}   
+**EMNLP 2025 Main**
+
 * Hamish Ivison, **Muru Zhang**, Faeze Brahman, Pang Wei Koh, Pradeep Dasigi  
 <span style="color:navy">Large-Scale Data Selection for Instruction Tuning</span>           
 [Paper](https://arxiv.org/abs/2503.01807){: .btn .btn--info .btn--small}   
@@ -15,7 +25,8 @@ author_profile: true
 
 * **Muru Zhang\***, Mayank Mishra\*, Zhongzhu Zhou, William Brandon, Jue Wang, Yoon Kim, Jonathan Ragan-Kelley, Shuaiwen Leon Song, Ben Athiwaratkun, Tri Dao     
 <span style="color:navy">Ladder-residual: parallelism-aware architecture for accelerating large model inference with communication overlapping</span>           
-[Paper](https://arxiv.org/abs/2501.06589){: .btn .btn--info .btn--small}   
+[Paper](https://arxiv.org/abs/2501.06589){: .btn .btn--info .btn--small}  
+**ICML 2025**
 
 * Aaron Walsman, **Muru Zhang**, Adam Fishman, Dieter Fox, Ali Farhadi     
 <span style="color:navy">Learning to Build by Building Your Own Instructions</span>   
