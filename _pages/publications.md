@@ -7,12 +7,12 @@ author_profile: true
 
 ### 2025
 
-* Xiaoyuan Zhu, **Muru Zhang**, Ollie Liu, Robin Jia, Willie Neiswanger 
+* Xiaoyuan Zhu, **Muru Zhang**, Ollie Liu, Robin Jia, Willie Neiswanger   
 <span style="color:navy">LLM Unlearning Without an Expert Curated Dataset</span>  
 [Paper](https://arxiv.org/abs/2508.06595){: .btn .btn--info .btn--small}   
 **COLM 2025**
 
-* Ting-Yun Chang, **Muru Zhang**, Jesse Thomason, Robin Jia 
+* Ting-Yun Chang, **Muru Zhang**, Jesse Thomason, Robin Jia   
 <span style="color:navy">Why Do Some Inputs Break Low-Bit LLM Quantization?</span>           
 [Paper](https://arxiv.org/abs/2506.12044){: .btn .btn--info .btn--small}   
 **EMNLP 2025 Main**
